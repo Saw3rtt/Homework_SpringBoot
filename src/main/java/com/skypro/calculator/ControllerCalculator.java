@@ -40,9 +40,8 @@ public class ControllerCalculator {
         }
         return calculatorService.divide(num1, num2);
     }
-
-    @ExceptionHandler(Exception.class)
-    public String handleException(Exception ex) {
+    @ExceptionHandler (Exception.class)
+    public String handleException(Exception ex){
         return "Нужно ввести два параметра";
     }
 }
