@@ -5,10 +5,10 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/calculator")
-public class ControllerCalculator {
+public class CalculatorController {
     private final CalculatorService calculatorService;
 
-    public ControllerCalculator(CalculatorService calculatorService) {
+    public CalculatorController(CalculatorService calculatorService) {
         this.calculatorService = calculatorService;
     }
 
@@ -41,7 +41,7 @@ public class ControllerCalculator {
         return calculatorService.divide(num1, num2);
     }
     @ExceptionHandler (Exception.class)
-    public String handleException(Exception ex){
+    public String handleException(){
         return "Нужно ввести два параметра";
     }
 }
